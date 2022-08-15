@@ -1,0 +1,53 @@
+.footerContainer{
+    width:100%;
+    margin: auto;
+    height: 400px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ 
+}
+.secondFootera {
+    display: flex;
+    justify-content: space-around;
+ gap: 220px;
+}
+
+.secondFootera>div>i {
+    margin-top: 7px;
+    font-size: 23px;
+    margin-left: 20px;
+}
+
+.secondFootera>div:last-child>i {
+    font-size: 25px;
+    margin-left: 58px;
+}
+
+.secondFooterb {
+    /* border:1px solid pink; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    margin: auto;
+}
+
+.secondFooterb>div {
+    margin: auto;
+    margin-top: 5%;
+  
+}
+
+.secondFooterb>div>p:first-child {
+ 
+    font-weight: bold;
+    margin-bottom: 20%;
+}
+
+.firstfooterb>p:first-child {
+  
+    font-weight: bold;
+    margin-bottom: 4%;
+}
+
+.secondFooterb>div:first-child>p:first-child {
+    margin-bottom: 32%;
+}
