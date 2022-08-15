@@ -1,18 +1,23 @@
 .singleProddiv>img{
     width: 50%;
     height: 500px;
-    border:1px solid rgb(13, 173, 35);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .singleProddiv{
     margin: auto;
     width: 70%;
-    border:1px solid red;
+    /* border:1px solid red; */
     display: flex;
     gap:50px;
     margin-top: 2%;
     margin-bottom: 2%;
 }
 .singlePageContainer{
-    width: 50%;
-    border:1px solid rgb(41, 27, 167);
+    width: 40%;
+    /* border:1px solid rgb(41, 27, 167); */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.singlePageContainer>p{
+ 
+    font-size: 18px;
 }
