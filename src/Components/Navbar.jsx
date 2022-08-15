@@ -4,10 +4,12 @@ import styles from "../Components/Navbar.module.css";
 
 const links = [
   { url: "/Home", name: "Home" },
-  { url: "/Skin", name: "Skin" },
-  { url: "/Hair", name: "Hair" },
-  { url: "/Makeup", name: "Makeup" },
+  { url: "/Eyes", name: "Eye" },
+  { url: "/Lips", name: "Lip" },
+  { url: "/MakeupFace", name: "Face" },
+  { url: "/Nail", name: "Nail" },
 ];
+
 
 const Navbar = () => {
   return (
