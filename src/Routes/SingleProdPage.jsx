@@ -11,9 +11,10 @@ export const fetchEyesData = (id) => {
 
 const SingleProdPage = () => {
   const [data, setData] = useState({});
-  const para = useParams();
 
-  console.log(data);
+const para = useParams();
+
+
 
   useEffect(() => {
     fetchEyesData(para.id)
@@ -28,15 +29,29 @@ const SingleProdPage = () => {
   return (
     <div className={styles.singleProddiv}>
       <img src={data.api_featured_image} alt="dsd" />
+
       <div className={styles.singlePageContainer}>
         <h2>{data.name}</h2>
-        <p><b>Product Type</b> : {data.product_type}</p>
-        <p><b>Category</b> : {data.category}</p>
-        <p><b>Price</b> : ₹{data.price}</p>
-        <p> <b>Brand</b>: {data.brand}</p>
-        <p> <b>Description</b>: {data.description}</p>
-       
+        <p>
+          <b>Product Type</b> : {data.product_type}
+        </p>
+        <p>
+          <b>Category</b> : {data.category}
+        </p>
+        <p>
+          <b>Price</b> : ₹{data.price}
+        </p>
+        <p>
+          {" "}
+          <b>Brand</b>: {data.brand}
+        </p>
+        <p>
+          {" "}
+          <b>Description</b>: {data.description}
+        </p>
+        <button className={styles.button}>Add to Cart</button>
       </div>
+      
     </div>
   );
 };

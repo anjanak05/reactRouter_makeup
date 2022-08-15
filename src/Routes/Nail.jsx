@@ -29,6 +29,7 @@ const Nail = () => {
         <img src={e.api_featured_image} alt="dcsfe" />
       <h2>{e.name}</h2> 
       <h3>MRP ₹{e.price}</h3>
+      <button className={styles.button}>Add to Cart</button>
         </div>
         </Link>
       </div>
