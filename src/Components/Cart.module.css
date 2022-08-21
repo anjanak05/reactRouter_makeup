@@ -1,0 +1,21 @@
+.cartContainer{
+    width: 90%;
+    height: auto;
+    border:1px solid red;
+    
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.mainDiv{
+display: flex;
+
+}
+.cartContainer>div>img{
+    width: 25%;
+    height: 300px;
+   margin-bottom: 2%;
+}
+.details{
+    padding-top: 30px;
+}

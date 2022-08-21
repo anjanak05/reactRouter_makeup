@@ -8,6 +8,10 @@ const links = [
   { url: "/Lips", name: "Lip" },
   { url: "/MakeupFace", name: "Face" },
   { url: "/Nail", name: "Nail" },
+  { url: "/Cart", name: "Cart" },
+  { url: "/Login", name: "Login" },
+
+
 ];
 
 

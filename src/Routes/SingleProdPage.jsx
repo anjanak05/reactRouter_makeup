@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import {    useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import styles from "../Components/SingleProd.module.css";
 
@@ -11,10 +11,10 @@ export const fetchEyesData = (id) => {
 
 const SingleProdPage = () => {
   const [data, setData] = useState({});
+  const [carData, setCartData] = useState({})
 
+console.log(carData)
 const para = useParams();
-
-
 
   useEffect(() => {
     fetchEyesData(para.id)
@@ -25,6 +25,26 @@ const para = useParams();
         console.log(err);
       });
   }, [para.id]);
+
+const handleCart= async( name, price, category, brand, image)=>{
+  console.log("categoy", category)
+let res = await fetch(`http://localhost:9090/carts`, {
+  method:"POST",
+  headers:{
+    'content-type': 'application/json'
+  },
+  body:JSON.stringify({
+       name:name,
+    price:price,
+    category:category,
+    brand:brand,
+    image:image
+  })
+}).then(res=>{
+  setCartData(res)
+}).catch(err=>console.log(err))
+alert("product added to cart")
+}
 
   return (
     <div className={styles.singleProddiv}>
@@ -49,7 +69,7 @@ const para = useParams();
           {" "}
           <b>Description</b>: {data.description}
         </p>
-        <button className={styles.button}>Add to Cart</button>
+        <button onClick={()=>handleCart(data.name, data.price, data.category, data.brand, data.api_featured_image)} className={styles.button}>Add to Cart</button>
       </div>
       
     </div>
